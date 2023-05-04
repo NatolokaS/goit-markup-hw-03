@@ -1,0 +1,224 @@
+:root {
+  --main-font-family: 'Roboto', sans-serif;
+  --secondary-font-family: 'Raleway', sans-serif;
+  --color-primary: #4d5ae5;
+  --color-pressed: #404bbf;
+  --color-dark: #2e2f42;
+  --color-success: #31d0aa;
+  --color-primary-text: #434455;
+  --color-subtle-text: #8e8f99;
+  --color-accent: #e7e9fc;
+  --color-light: #f4f4fd;
+  --color-modal-overlay: #f4f4fd;
+  --color-hero-background: #2e2f42;
+  --color-white-background: #ffffff;
+  --color-modal-background: #fcfcfc;
+}
+
+body {
+  font-family: var(--main-font-family);
+  color: var(--color-primary-text);
+  background-color: var(--color-white-background);
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Header */
+.logo {
+  font-family: var(--secondary-font-family);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  display: flex;
+  /* align-items: center; */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.logo-style {
+  color: var(--color-dark);
+}
+
+.site-nav .link {
+  color: var(--color-dark);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--color-pressed);
+}
+
+.page-address {
+  font-style: normal;
+}
+
+.list-address .link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-primary-text);
+}
+
+.list-address .link:hover,
+.list-address .link:focus {
+  color: var(--color-pressed);
+}
+
+/* Hero */
+
+.hero .main-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  width: 496px;
+  color: var(--color-white-background);
+}
+
+.hero {
+  background: var(--color-hero-background);
+}
+
+.modal-open-btn {
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  /* align-items: center; */
+  letter-spacing: 0.04em;
+  color: var(--color-white-background);
+  background: var(--color-primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.modal-open-btn:hover,
+.modal-open-btn:focus {
+  background: var(--color-pressed);
+}
+
+/* Section About */
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+
+.description-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-primary-text);
+}
+
+/* Section What are we doing */
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-dark);
+}
+
+/* Section Our Team */
+.team-company {
+  background: var(--color-light);
+}
+.subtitle-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+
+.position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  /* text-align: center; */
+  letter-spacing: 0.02em;
+  color: var(--color-primary-text);
+}
+
+.team-list-item {
+  background: var(--color-white-background);
+}
+
+/* Footer Content */
+.footer {
+  background: var(--color-hero-background);
+}
+
+/* Footer Content */
+.footer-logo {
+  color: var(--color-primary);
+  font-family: var(--secondary-font-family);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-logo-style {
+  color: var(--color-light);
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-light);
+}
+
+/* Section Projects */
+.project-btn {
+  font-family: var(--main-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  background: var(--color-modal-overlay);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+}
+
+.project-btn:hover,
+.project-btn:focus {
+  color: var(--color-white-background);
+  background: var(--color-pressed);
+}
