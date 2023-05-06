@@ -33,17 +33,96 @@ button {
   text-decoration: none;
 }
 
-/* Header */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+/* ===============Components=============== */
+
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* ==================Components=============== */
+
+/* ===================Header================== */
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.page-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.list-address {
+  display: flex;
+  text-align: center;
+  gap: 40px;
+}
+
 .logo {
   font-family: var(--secondary-font-family);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  /* align-items: center; */
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-primary);
+  display: flex;
+  padding: 24px 0;
+  margin-right: 76px;
+  align-items: center;
+  flex-direction: row;
 }
 
 .logo-style {
@@ -56,7 +135,13 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* margin-right: 40px; */
+  display: block;
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.site-nav .menu-link:not(:last-child) {
+  margin-right: 40px;
 }
 
 .site-nav .link:hover,
@@ -81,21 +166,29 @@ button {
 .list-address .link:focus {
   color: var(--color-pressed);
 }
+/* ===================Header================== */
 
-/* Hero */
+/* ===================Hero==================== */
 
-.hero .main-title {
+.main-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  width: 496px;
+  max-width: 496px;
   color: var(--color-white-background);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
 }
 
 .hero {
   background: var(--color-hero-background);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .modal-open-btn {
@@ -103,13 +196,15 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  /* align-items: center; */
+  display: block;
   letter-spacing: 0.04em;
   color: var(--color-white-background);
   background: var(--color-primary);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
+  margin: 48px auto 0 auto;
+  min-width: 169px;
+  padding: 16px 32px;
 }
 
 .modal-open-btn:hover,
@@ -117,13 +212,31 @@ button {
   background: var(--color-pressed);
 }
 
-/* Section About */
+/* ===================Hero==================== */
+
+/* ============== Section About ============== */
+
+.about {
+  padding: 120px 0;
+}
+
+.about-list {
+  gap: 24px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-list-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--color-dark);
+  margin-bottom: 8px;
 }
 
 .description-text {
@@ -134,7 +247,14 @@ button {
   color: var(--color-primary-text);
 }
 
-/* Section What are we doing */
+/* ============== Section About ============== */
+
+/* =========Section What are we doing========= */
+
+.services {
+  padding-bottom: 120px;
+}
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -143,11 +263,24 @@ button {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--color-dark);
+  margin-bottom: 72px;
 }
 
-/* Section Our Team */
+.list-services {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.service-item {
+  width: calc((100% - 48px) / 3);
+}
+/* =========Section What are we doing========= */
+
+/* ============Section Our Team============ */
 .team-company {
   background: var(--color-light);
+  padding-bottom: 120px;
 }
 .subtitle-name {
   font-weight: 500;
@@ -169,24 +302,43 @@ button {
 
 .team-list-item {
   background: var(--color-white-background);
+  flex-basis: calc((100% - 72px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
-/* Footer Content */
+.list-team-company {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.team-card-wrapper {
+  padding: 32px 16px 32px 16px;
+  text-align: center;
+}
+/* ============Section Our Team============ */
+
+/* ============Footer Content============ */
 .footer {
   background: var(--color-hero-background);
+  padding: 100px 0 100px 0;
 }
 
-/* Footer Content */
 .footer-logo {
   color: var(--color-primary);
   font-family: var(--secondary-font-family);
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .footer-logo-style {
@@ -194,25 +346,43 @@ button {
 }
 
 .footer-text {
-  font-weight: 400;
-  font-size: 16px;
+  /* font-weight: 400;
+  font-size: 16px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-light);
+  width: 264px;
 }
 
-/* Section Projects */
+.footer-logo link {
+  display: block;
+  margin-bottom: 16px;
+}
+/* ============Footer Content============ */
+
+/* ===========Section Projects=========== */
+
+.projects-list {
+  gap: 24px;
+  display: flex;
+  margin-bottom: 72px;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-btn {
   font-family: var(--main-font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
   letter-spacing: 0.04em;
-  color: var(--color-primary);
-  background: var(--color-modal-overlay);
+  padding: 12px 24px;
+  background-color: var(--color-modal-overlay);
   border: 1px solid var(--color-accent);
   border-radius: 4px;
 }
@@ -221,4 +391,34 @@ button {
 .project-btn:focus {
   color: var(--color-white-background);
   background: var(--color-pressed);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.portfolio-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.project-items {
+  column-gap: 24px;
+  row-gap: 48px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects {
+  padding: 96px 0 120px;
+}
+
+.portfolio-card-wrapper {
+  padding: 32px 16px;
+  border-bottom: 1px solid var(--btn-border-color);
+  border-left: 1px solid var(--btn-border-color);
+  border-right: 1px solid var(--btn-border-color);er-color);
+  border-top: none;
+}
+
+/* ===========Section Projects=========== */
