@@ -335,7 +335,7 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  align-items: center;
+  /* align-items: center; */
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -348,15 +348,14 @@ img {
 }
 
 .footer-text {
-  /* font-weight: 400;
-  font-size: 16px; */
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-light);
   width: 264px;
 }
 
-.footer-logo link {
+.footer-logo {
   display: block;
   margin-bottom: 16px;
 }
