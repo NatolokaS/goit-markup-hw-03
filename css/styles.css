@@ -91,6 +91,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* margin-left: auto; */
 }
 
 .page-navigation {
@@ -373,6 +374,7 @@ img {
 
 .project-btn {
   font-family: var(--main-font-family);
+  color: var(--color-primary);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -380,7 +382,6 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  cursor: pointer;
   letter-spacing: 0.04em;
   padding: 12px 24px;
   background-color: var(--color-modal-overlay);
